@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 import pandas as pd
@@ -14,8 +15,8 @@ def index():
 
 @app.route("/data")
 def get_data():
-
-    df_clean = pd.read_csv('df.csv')
+    
+    df_clean = pd.read_csv('df.csv').iloc[:, 1:]
 
     return df_clean.to_json(orient='records')
 
