@@ -70,38 +70,41 @@ function makeGraphs(error, recordsJson) {
 		.yAxis().ticks(4);
 
 	genderChart
-        .width(300)
-        .height(100)
+        .width(250)
+        .height(140)
         .dimension(genderDim)
         .group(genderGroup)
         .ordering(function(d) { return -d.value })
         .colors(['#6baed6'])
         .elasticX(true)
+		.labelOffsetY(9)
         .xAxis().ticks(4);
 
 	ageSegmentChart
-		.width(300)
-		.height(150)
+		.width(250)
+		.height(200)
         .dimension(ageSegmentDim)
         .group(ageSegmentGroup)
+		.ordering(function(d) { return -d.value })
         .colors(['#6baed6'])
         .elasticX(true)
         .labelOffsetY(10)
         .xAxis().ticks(4);
 
 	phoneBrandChart
-		.width(300)
-		.height(310)
+		.width(250)
+		.height(400)
         .dimension(phoneBrandDim)
         .group(phoneBrandGroup)
         .ordering(function(d) { return -d.value })
         .colors(['#6baed6'])
         .elasticX(true)
+		.labelOffsetY(9)
         .xAxis().ticks(4);
 
     locationChart
     	.width(200)
-		.height(510)
+		.height(600)
         .dimension(locationdDim)
         .group(locationGroup)
         .ordering(function(d) { return -d.value })
